@@ -1,0 +1,15 @@
+# Zera — high-quality + fast-start settings for YOUR OWN Lavalink v4 node.
+# Copy only the keys below into the `lavalink.server:` block of your application.yml (keep your password / plugins / sources as they are).
+# A public/free node (like the default LAVALINK_URL) cannot be changed from the bot — these only work on a node you host.
+lavalink:
+  server:
+    opusEncodingQuality: 10        # max Opus quality (default 10, but some hosts ship lower values)
+    resamplingQuality: HIGH        # best resampler (default LOW on some builds)
+    bufferDurationMs: 400          # NAS buffer: lower = faster track start
+    frameBufferDurationMs: 5000    # smooth playback during network hiccups
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+    # Tip: run the node on the SAME host/region as the bot (use 127.0.0.1 in LAVALINK_URL) — that removes the network round-trip from every /play.
